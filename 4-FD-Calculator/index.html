@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FD Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator">
+        <h1>FD Calculator</h1>
+        <div class="input-section">
+            <label for="investment">Total Investment</label>
+            <input type="range" id="investment" min="10000" max="1000000" step="10000" value="100000">
+            <span id="investment-value">₹100,000</span>
+        </div>
+
+        <div class="input-section">
+            <label for="interest-rate">Rate of interest(p.a)</label>
+            <input type="range" id="interest-rate" min="1" max="15" step="0.1" value="6.5">
+            <span id="interest-rate-value">6.5%</span>
+        </div>
+
+        <div class="input-section">
+            <label for="time-period">Time period (Years)</label>
+            <input type="range" id="time-period" min="1" max="20" step="1" value="5">
+            <span id="time-period-value">5</span>
+        </div>
+
+        <button onclick="calculateFD()">INVEST NOW</button>
+        <div class="output-section">
+            <p>Invested amount:<span id="invested-amount">-</span></p>
+            <p>Est. returns:<span id="estimated-returns">-</span></p>
+            <p>Total value:<span id="total-value">-</span> </p>
+        </div>
+
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
