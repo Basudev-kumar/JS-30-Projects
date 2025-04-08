@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    background: linear-gradient(to left,#ffefd5,#87cefa);
+    font-family: cursive;
+}
+
+.heading{
+    color: #4b0082;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 35px;
+}
+
+.info-text{
+    text-align: center;
+    color: #4b0082;
+    font-size: 18px;
+}
+
+.app{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,300px);
+    gap: 40px;
+    justify-content: center;
+    padding: 50px;
+}
+
+.note{
+    padding: 17px;
+    border-radius: 15px;
+    resize: none;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+    height: 200px;
+    color: #82001c;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.7);
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.note::placeholder{
+    color: gray;
+    opacity: 0.5;
+}
+
+.note:hover,
+.note:focus{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background:  rgba(255,255,255,0.9);
+}
+
+.btn{
+    height: 200px;
+    border: none;
+    border-radius: 10%;
+    font-size: 70px;
+    font-weight: 700;
+    color: #4b0082;
+    cursor: pointer;
+    background-color: #ffd700;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    background-color: #ff6347;
+    color: aliceblue;
+}
