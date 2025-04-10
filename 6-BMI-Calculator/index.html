@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        
+        <div class="input-group">
+            <h3 for="age">Age:</h3>
+            <input type="number" id="age" name="age" min="1" max="120">
+        </div>
+
+        <div class="input-group">
+            <h3>Gender:</h3>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="female">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+        </div>
+        <hr>
+
+        <div class="input-group">
+            <h3 for="height">Height (cm):</h3> 
+            <input type="range" name="height" id="height" min="100" max="220" value="170"
+            oninput="updateHeightValue(this.value)"
+            >  
+            <span id="height-value">170</span> cm
+        </div>
+        <hr>
+
+        <div class="input-group">
+            <h3 for="weight">Weight (kg):</h3> 
+            <input type="range" name="weight" id="weight" min="30" max="150" value="70"
+            oninput="updateWeightValue(this.value)"
+            >  
+            <span id="weight-value">70</span> kg
+        </div>
+        <hr>
+
+        <button onclick="calculateBMI()">Calculate BMI</button>
+
+        <div class="output">
+            <h2>Your BMI: <span id="bmi-result">0</span></h2>
+            <p id="bmi-category"></p>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

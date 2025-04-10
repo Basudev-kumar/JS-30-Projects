@@ -1,0 +1,98 @@
+body{
+    font-family: sans-serif;
+    background: linear-gradient(to right,darkcyan,darkgoldenrod);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container{
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    width: 400px;
+}
+
+h1{
+    margin-bottom: 30px;
+}
+
+.input-group h3{
+    color: whitesmoke;
+    text-decoration: underline;
+    text-shadow: 0 0 19px rgba(15, 98, 42, 0.6);
+}
+
+label{
+    font-size: 18px;
+}
+
+input[type="number"], input[type="range"]{
+    width: 100%;
+}
+
+input[type="number"]{
+    background: linear-gradient(to right, skyblue,aqua);
+    border-radius: 7px;
+    outline: 1px solid white;
+    border: none;
+    font-size: 22px;
+    color: black;
+    padding: 3px;
+}
+
+input[type="range"]{
+    margin-top: 3px;
+}
+
+.radio-group label{
+    margin-right: 15px;
+}
+
+.radio-group{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.input-group span{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+button{
+    background-color: aqua;
+    border: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top:20px ;
+}
+
+button:hover{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+
+.output{
+    margin-top: 20px;
+}
+
+#bmi-result{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#bmi-category{
+    font-size: 1.1em;
+    font-style: italic;
+}
