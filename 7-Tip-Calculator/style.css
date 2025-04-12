@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    letter-spacing: 0.4px;
+}
+
+body{
+    background-color: darkturquoise;
+}
+
+.container{
+    background: linear-gradient(135deg,#ff6a88,#ff9566);
+    width: 450px;
+    padding: 50px 40px;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+       from{
+        top: -50%;
+       }
+       
+       to{
+            top: 50%;
+       }
+}
+
+h1{
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+
+.lbl{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.val{
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.input-box{
+    background-color: #fff;
+    color: #ff6a88;
+    padding: 5px;
+    transition: background-color 0.3s, color 0.3s ease;
+}
+
+#bill{
+   background-color: transparent; 
+   border: none;
+   outline: none;
+   width: 100px;
+   text-align: right;
+   color: #ff6a88;
+   transition: color 0.3s ease;
+}
+
+hr{
+    border: none;
+    border-bottom: 1px solid #fff ;
+}
+
+input[type="range"]{
+    width: 100%;
+    cursor: pointer;
+    appearance: none;
+    height: 2px;
+    border-radius: 2px;
+    background-color:#fff ;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #58d68d;
+    transition: background-color 0.3s ease;
+}
+
+section:not(:last-child){
+    margin-bottom: 40px;
+}
+
+section:not(:first-child){
+    margin-top: 40px;
+}
+
+section:last-child{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+      from{
+        opacity: 0;
+      }  
+
+      to{
+        opacity: 1;
+      }
+}
+
+section:last-child .val,
+section:last-child .lbl{
+    color: #ff6a88;
+    transition: color 0.3s ease;
+}
