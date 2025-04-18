@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A beautiful notes taking application with rich features">
+    <title>Notes Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="heading">
+                <i class="fas fa-book-open"></i> Color Notes
+                <span class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </span>
+            </h1>
+            <p class="info-text">Double click to delete • Click + to add • Drag to rearrange</p>
+        </header>
+
+        <main>
+            <div class="app" id="App">
+                <button class="btn" id="btn" aria-label="Add new note">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Notes are saved automatically</p>
+            <div class="stats">
+                <span id="note-count">0 notes</span>
+                <span id="char-count">0 characters</span>
+            </div>
+        </footer>
+    </div>
+
+    <div class="notification" id="notification"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="heading">Notes App</h1>
+    <p class="info-text">Double click on a note to remove it</p>
+    <div class="app" id="App">
+        <!-- <textarea class="note" cols="30" rows="10"
+            placeholder="Empty Note"
+        ></textarea> -->
+        <button class="btn" id="btn">+</button>
+    </div>
+    <script src="scipt.js"></script>
+</body>
+</html> -->
