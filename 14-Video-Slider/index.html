@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide active">
+                <video src="./videos/v1.mp4" muted loop autoplay></video>
+                <div class="info">
+                    <h2>Nature Beauty</h2>
+                    <p>Experience the serene beauty of nature with this calming video of yellow flowers.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <video src="./videos/v2.mp4" muted loop></video>
+                <div class="info">
+                    <h2>Mountain Drive</h2>
+                    <p>Feel the thrill of driving down a curved mountain highway with breathtaking views.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <video src="./videos/v3.mp4" muted loop></video>
+                <div class="info">
+                    <h2>Colorful Lights</h2>
+                    <p>Immerse yourself in a world of vibrant colors and dynamic lighting effects.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <video src="./videos/v4.mp4" muted loop></video>
+                <div class="info">
+                    <h2>Neon Dance</h2>
+                    <p>Watch an energetic dance performance under mesmerizing neon lights.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <video src="./videos/v5.mp4" muted loop></video>
+                <div class="info">
+                    <h2>Sea Creature</h2>
+                    <p>Explore the fascinating underwater world with this beautiful sea creature.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button class="prev-btn">&lt;</button>
+            <button class="next-btn">&gt;</button>
+        </div>
+
+        <div class="navigation-visibility">
+            <div class="slide-icon active"></div>
+            <div class="slide-icon"></div>
+            <div class="slide-icon"></div>
+            <div class="slide-icon"></div>
+            <div class="slide-icon"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
