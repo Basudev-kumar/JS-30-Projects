@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gradient Generator</h1>
+            <p class="subtitle">Create beautiful gradients for your projects</p>
+        </header>
+
+        <div class="gradient-preview" id="gradientPreview"></div>
+
+        <div class="color-controls">
+            <div class="color-picker">
+                <label for="color-a">Color 1</label>
+                <input type="color" id="color-a" value="#ff69b4" aria-label="First color picker">
+                <input type="text" id="color-a-text" value="#ff69b4" maxlength="7">
+            </div>
+            
+            <button id="swap-colors" aria-label="Swap colors">
+                <i class="fas fa-exchange-alt"></i>
+            </button>
+            
+            <div class="color-picker">
+                <label for="color-b">Color 2</label>
+                <input type="color" id="color-b" value="#4a6ee0" aria-label="Second color picker">
+                <input type="text" id="color-b-text" value="#4a6ee0" maxlength="7">
+            </div>
+        </div>
+
+        <div class="direction-controls">
+            <h2>Direction</h2>
+            <div class="buttons">
+                <button onclick="setDirection('to top',this)" aria-label="Top direction">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+                <button class="active" onclick="setDirection('to bottom',this)" aria-label="Bottom direction">
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+                <button onclick="setDirection('to right',this)" aria-label="Right direction">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <button onclick="setDirection('to left',this)" aria-label="Left direction">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <button class="rotate-icon" onclick="setDirection('to top right',this)" aria-label="Top right direction">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+                <button class="rotate-icon" onclick="setDirection('to bottom left',this)" aria-label="Bottom left direction">
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+                <button class="rotate-icon" onclick="setDirection('to bottom right',this)" aria-label="Bottom right direction">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="rotate-icon" onclick="setDirection('to top left',this)" aria-label="Top left direction">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="presets">
+            <h2>Popular Gradients</h2>
+            <div class="preset-grid">
+                <div class="preset" style="background: linear-gradient(to right, #ff758c, #ff7eb3)" onclick="applyPreset('#ff758c', '#ff7eb3')"></div>
+                <div class="preset" style="background: linear-gradient(to right, #00c6fb, #005bea)" onclick="applyPreset('#00c6fb', '#005bea')"></div>
+                <div class="preset" style="background: linear-gradient(to right, #a1ffce, #faffd1)" onclick="applyPreset('#a1ffce', '#faffd1')"></div>
+                <div class="preset" style="background: linear-gradient(to right, #f46b45, #eea849)" onclick="applyPreset('#f46b45', '#eea849')"></div>
+                <div class="preset" style="background: linear-gradient(to right, #4776e6, #8e54e9)" onclick="applyPreset('#4776e6', '#8e54e9')"></div>
+                <div class="preset" style="background: linear-gradient(to right, #43cea2, #185a9d)" onclick="applyPreset('#43cea2', '#185a9d')"></div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="generate" onclick="generateCode()">
+                <i class="fas fa-magic"></i> Generate Code
+            </button>
+            <button id="random" onclick="randomGradient()">
+                <i class="fas fa-random"></i> Random
+            </button>
+        </div>
+
+        <div class="output">
+            <h2>CSS Code</h2>
+            <textarea id="code" rows="3" readonly></textarea>
+            <button id="copy" onclick="copyText()">
+                <i class="far fa-copy"></i> Copy to Clipboard
+            </button>
+            <div id="copy-message" class="hidden">Copied!</div>
+        </div>
+
+        <footer>
+            <p>Use this code in your CSS stylesheets</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="colors">
+            <input type="color" id="color-a" value="#ff69b4">
+            <input type="color" id="color-b" value="#4a6ee0">
+        </div>
+        <div class="buttons">
+            <button onclick="setDirection('to top',this)">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            <button class="active"  onclick="setDirection('to bottom',this)">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+
+            <button onclick="setDirection('to right',this)">
+                <i class="fas fa-arrow-right"></i>
+            </button>
+            
+            <button onclick="setDirection('to left',this)">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+
+            <button class="rotate-icon" onclick="setDirection('to top right',this)">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+
+            <button class="rotate-icon" onclick="setDirection('to bottom left',this)">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+
+            <button class="rotate-icon" onclick="setDirection('to bottom right',this)">
+                <i class="fas fa-arrow-right"></i>
+            </button>
+
+            <button class="rotate-icon" onclick="setDirection('to top left',this)">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+        </div>
+
+        <button id="generate" onclick="generateCode()">Generate</button>
+
+        <div class="output">
+            <textarea  id="code"  rows="2"></textarea>
+            <button id="copy" onclick="copyText()">Copy</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> -->
