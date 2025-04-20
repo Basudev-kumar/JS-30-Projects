@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FD Calculator | Smart Financial Planning</title>
+    <meta name="description" content="Calculate your Fixed Deposit returns with our easy-to-use calculator. Plan your investments wisely.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="calculator-header">
+                <h1><i class="fas fa-calculator"></i> FD Calculator</h1>
+                <p class="subtitle">Plan your fixed deposit investments with precision</p>
+            </div>
+            
+            <div class="input-section">
+                <label for="investment">
+                    <i class="fas fa-rupee-sign"></i> Investment Amount
+                    <span class="info-tooltip" data-tooltip="Minimum ₹10,000 - Maximum ₹10,00,000">
+                        <i class="fas fa-info-circle"></i>
+                    </span>
+                </label>
+                <div class="input-with-icon">
+                    <input type="range" id="investment" min="10000" max="1000000" step="10000" value="100000" aria-label="Investment amount">
+                    <span id="investment-value" class="value-display">₹1,00,000</span>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <label for="interest-rate">
+                    <i class="fas fa-percentage"></i> Interest Rate (p.a.)
+                    <span class="info-tooltip" data-tooltip="Current market rates range from 3% to 8.5%">
+                        <i class="fas fa-info-circle"></i>
+                    </span>
+                </label>
+                <div class="input-with-icon">
+                    <input type="range" id="interest-rate" min="1" max="15" step="0.1" value="6.5" aria-label="Interest rate">
+                    <span id="interest-rate-value" class="value-display">6.5%</span>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <label for="time-period">
+                    <i class="fas fa-clock"></i> Time Period
+                    <span class="info-tooltip" data-tooltip="FD tenure can range from 7 days to 10 years">
+                        <i class="fas fa-info-circle"></i>
+                    </span>
+                </label>
+                <div class="input-with-icon">
+                    <input type="range" id="time-period" min="1" max="20" step="1" value="5" aria-label="Time period in years">
+                    <span id="time-period-value" class="value-display">5 Years</span>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <label for="compounding-frequency">
+                    <i class="fas fa-calendar-alt"></i> Compounding Frequency
+                </label>
+                <select id="compounding-frequency" aria-label="Compounding frequency">
+                    <option value="1">Annually</option>
+                    <option value="2">Semi-Annually</option>
+                    <option value="4" selected>Quarterly</option>
+                    <option value="12">Monthly</option>
+                </select>
+            </div>
+
+            <button id="calculate-btn" class="calculate-button" onclick="calculateFD()">
+                <i class="fas fa-chart-line"></i> Calculate Returns
+            </button>
+            
+            <div class="output-section">
+                <div class="result-card">
+                    <div class="result-icon">
+                        <i class="fas fa-wallet"></i>
+                    <span>Invested Amount</span>
+                    <span id="invested-amount" class="result-value">-</span>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon">
+                        <i class="fas fa-coins"></i>
+                        <span>Est. Returns</span>
+                        <span id="estimated-returns" class="result-value">-</span>
+                    </div>
+                </div>
+                <div class="result-card highlight">
+                    <div class="result-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                        <span>Total Value</span>
+                        <span id="total-value" class="result-value">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="disclaimer">
+                <p><i class="fas fa-exclamation-circle"></i> Results are estimates only. Actual returns may vary based on bank policies and market conditions.</p>
+            </div>
+        </div>
+
+        <div class="features-section">
+            <h2>Why Use Fixed Deposits?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Safe Investment</h3>
+                    <p>FDs offer guaranteed returns with minimal risk compared to market-linked investments.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Fixed Returns</h3>
+                    <p>Lock in interest rates regardless of market fluctuations during your tenure.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-piggy-bank"></i>
+                    <h3>Flexible Tenures</h3>
+                    <p>Choose from 7 days to 10 years based on your financial goals.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FD Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator">
+        <h1>FD Calculator</h1>
+        <div class="input-section">
+            <label for="investment">Total Investment</label>
+            <input type="range" id="investment" min="10000" max="1000000" step="10000" value="100000">
+            <span id="investment-value">₹100,000</span>
+        </div>
+
+        <div class="input-section">
+            <label for="interest-rate">Rate of interest(p.a)</label>
+            <input type="range" id="interest-rate" min="1" max="15" step="0.1" value="6.5">
+            <span id="interest-rate-value">6.5%</span>
+        </div>
+
+        <div class="input-section">
+            <label for="time-period">Time period (Years)</label>
+            <input type="range" id="time-period" min="1" max="20" step="1" value="5">
+            <span id="time-period-value">5</span>
+        </div>
+
+        <button onclick="calculateFD()">INVEST NOW</button>
+        <div class="output-section">
+            <p>Invested amount:<span id="invested-amount">-</span></p>
+            <p>Est. returns:<span id="estimated-returns">-</span></p>
+            <p>Total value:<span id="total-value">-</span> </p>
+        </div>
+
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html> -->
