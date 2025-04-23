@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blob Maker - Create Organic Shapes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Blob Maker</h1>
+            <p class="tagline">Create beautiful organic shapes for your designs</p>
+        </header>
+        
+        <div class="output-container">
+            <div class="output">
+                <div class="blob"></div>
+            </div>
+            <div class="blob-controls">
+                <div class="control-group dimensions">
+                    <h3>Dimensions</h3>
+                    <div class="control-row">
+                        <label for="blob-height">
+                            <i class="fas fa-arrows-alt-v"></i> Height
+                        </label>
+                        <input type="number" value="150" id="blob-height" min="50" max="500">
+                    </div>
+                    <div class="control-row">
+                        <label for="blob-width">
+                            <i class="fas fa-arrows-alt-h"></i> Width
+                        </label>
+                        <input type="number" value="150" id="blob-width" min="50" max="500">
+                    </div>
+                </div>
+                
+                <div class="control-group colors">
+                    <h3>Colors</h3>
+                    <div class="color-pickers">
+                        <div class="color-picker">
+                            <label for="color1">Color 1</label>
+                            <input type="color" id="color1" value="#99a2f0">
+                        </div>
+                        <div class="color-picker">
+                            <label for="color2">Color 2</label>
+                            <input type="color" id="color2" value="#555eaa">
+                        </div>
+                    </div>
+                    <div class="control-row">
+                        <label for="gradient-direction">
+                            <i class="fas fa-compass"></i> Gradient Direction
+                        </label>
+                        <select id="gradient-direction">
+                            <option value="to right">Horizontal</option>
+                            <option value="to bottom">Vertical</option>
+                            <option value="to bottom right">Diagonal</option>
+                            <option value="to bottom left">Reverse Diagonal</option>
+                            <option value="circle">Radial</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="control-group shape-controls">
+            <h3>Shape Controls</h3>
+            <div class="sliders">
+                <div class="slider-container">
+                    <label for="radius1">Top Left</label>
+                    <input type="range" id="radius1" value="30" min="0" max="100">
+                    <span class="slider-value">30%</span>
+                </div>
+                <div class="slider-container">
+                    <label for="radius2">Top Right</label>
+                    <input type="range" id="radius2" value="80" min="0" max="100">
+                    <span class="slider-value">80%</span>
+                </div>
+                <div class="slider-container">
+                    <label for="radius3">Bottom Right</label>
+                    <input type="range" id="radius3" value="60" min="0" max="100">
+                    <span class="slider-value">60%</span>
+                </div>
+                <div class="slider-container">
+                    <label for="radius4">Bottom Left</label>
+                    <input type="range" id="radius4" value="40" min="0" max="100">
+                    <span class="slider-value">40%</span>
+                </div>
+            </div>
+            <div class="presets">
+                <button class="preset-btn" data-preset="circle">Circle</button>
+                <button class="preset-btn" data-preset="oval">Oval</button>
+                <button class="preset-btn" data-preset="teardrop">Teardrop</button>
+                <button class="preset-btn" data-preset="random">Random</button>
+            </div>
+        </div>
+        
+        <div class="output-code">
+            <div class="code-container">
+                <label for="css-code">CSS Code:</label>
+                <input type="text" id="css-code" readonly>
+            </div>
+            <div class="action-buttons">
+                <button id="copy" class="btn-primary">
+                    <i class="far fa-copy"></i> Copy
+                </button>
+                <button id="download" class="btn-secondary">
+                    <i class="fas fa-download"></i> Download PNG
+                </button>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Made with <i class="fas fa-heart"></i> for designers & developers</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blob Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="output">
+            <div class="blob"></div>
+        </div>
+        <div class="dimensions">
+            <div>
+                <label for="blob-height">Height</label>
+                <input type="number" value="150" id="blob-height">
+            </div>
+            <div>
+                <label for="blob-width">Width</label>
+                <input type="number" value="112" id="blob-width">
+            </div>
+        </div>
+        <div class="sliders">
+            <input type="range" value="30">
+            <input type="range" value="80">
+            <input type="range" value="60">
+            <input type="range" value="40">
+        </div>
+        <input type="text" id="css-code" readonly>
+        <button id="copy">Copy</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> -->
