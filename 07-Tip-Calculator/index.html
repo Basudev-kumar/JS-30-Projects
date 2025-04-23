@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-card">
+            <h1><i class="fas fa-calculator"></i> Tip Calculator</h1>
+            
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="bill" class="lbl">
+                        <i class="fas fa-dollar-sign"></i> Bill Amount
+                    </label>
+                    <div class="input-box">
+                        <span>$</span>
+                        <input type="number" value="0.00" id="bill" class="val" aria-label="Bill amount">
+                    </div>
+                </div>
+                
+                <div class="slider-group">
+                    <label for="tip" class="lbl">
+                        <i class="fas fa-percentage"></i> Tip Percentage: <span id="tip-percent" class="val">15</span>%
+                    </label>
+                    <input type="range" min="1" max="30" id="tip" value="15" aria-label="Tip percentage">
+                    <div class="tip-presets">
+                        <button class="tip-btn" data-tip="5">5%</button>
+                        <button class="tip-btn" data-tip="10">10%</button>
+                        <button class="tip-btn" data-tip="15">15%</button>
+                        <button class="tip-btn" data-tip="20">20%</button>
+                        <button class="tip-btn" data-tip="25">25%</button>
+                    </div>
+                </div>
+                
+                <div class="slider-group">
+                    <label for="no-of-people" class="lbl">
+                        <i class="fas fa-users"></i> Number of People: <span id="split-num" class="val">1</span>
+                    </label>
+                    <input type="range" min="1" max="15" id="no-of-people" value="1" aria-label="Number of people">
+                </div>
+            </div>
+            
+            <div class="results-section">
+                <div class="result-row">
+                    <div class="result-label">
+                        <i class="fas fa-coins"></i> Tip Amount
+                    </div>
+                    <div id="tip-amount" class="result-value">$0.00</div>
+                </div>
+                
+                <div class="result-row">
+                    <div class="result-label">
+                        <i class="fas fa-receipt"></i> Total Amount
+                    </div>
+                    <div id="total-amount" class="result-value">$0.00</div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="result-row highlight">
+                    <div class="result-label">
+                        <i class="fas fa-user"></i> Tip Per Person
+                    </div>
+                    <div id="tip-per-person" class="result-value">$0.00</div>
+                </div>
+                
+                <div class="result-row highlight">
+                    <div class="result-label">
+                        <i class="fas fa-users"></i> Total Per Person
+                    </div>
+                    <div id="total-per-person" class="result-value">$0.00</div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="reset-btn" class="btn reset">
+                    <i class="fas fa-redo"></i> Reset
+                </button>
+                <button id="share-btn" class="btn share">
+                    <i class="fas fa-share-alt"></i> Share
+                </button>
+            </div>
+        </div>
+        
+        <div class="theme-toggle">
+            <button id="theme-btn" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tip Calculator</h1>
+         <section>
+            <div class="wrapper">
+                <label for="bill" class="lbl">Bill</label>
+                <div class="input-box">
+                    <span>$</span>
+                    <input type="number" value="0.00" id="bill" class="val">
+                </div>
+            </div>
+             <hr>
+             
+             <div class="wrapper">
+                <span class="lbl">Tip</span>
+                <span id="tip-amount" class="val">$0</span>
+             </div>
+
+             <div class="wrapper">
+                <span class="lbl">Total Amount</span>
+                <span id="total-amount" class="val">$0</span>
+             </div>
+         </section>
+
+         <section>
+            <div class="wrapper">
+                <label for="tip" class="lbl">Tip%</label>
+                <span id="tip-percent" class="val">0</span>
+            </div>
+
+            <input type="range" min="1" id="tip" value="15">
+
+            <div class="wrapper">
+                <label for="no-of-people" class="lbl">No. of People</label>
+                <span id="split-num" class="val">0</span>
+            </div>
+
+            <input type="range" min="1" max="15" id="no-of-people" value="1">
+         </section>
+
+         <section>
+            <div class="wrapper">
+                <span class="lbl">Tip Per Person</span>
+                <span id="tip-per-person" class="val">$0</span>
+            </div>
+
+            <div class="wrapper">
+                <span class="lbl">Total Per Person</span>
+                <span id="total-per-person" class="val">$0</span>
+            </div>
+         </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> -->
