@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPerfect - Advanced Image Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1><i class="fas fa-camera-retro"></i> PixelPerfect</h1>
+            <p class="tagline">Transform your images with ease</p>
+        </header>
+        
+        <div class="main-wrapper">
+            <div class="editor-panel">
+                <div class="panel-section">
+                    <h2><i class="fas fa-sliders-h"></i> Filters</h2>
+                    <div class="filter">
+                        <div class="filter-header">
+                            <label for="blur"><i class="fas fa-blur"></i> Blur</label>
+                            <span class="range-value" id="blur-value">0px</span>
+                        </div>
+                        <input type="range" min="0" max="5" value="0" step="0.1" id="blur" aria-label="Blur control">
+                    </div>  
+                    
+                    <div class="filter">
+                        <div class="filter-header">
+                            <label for="contrast"><i class="fas fa-adjust"></i> Contrast</label>
+                            <span class="range-value" id="contrast-value">100%</span>
+                        </div>
+                        <input type="range" min="0" max="200" value="100" id="contrast" aria-label="Contrast control">
+                    </div>   
+                    
+                    <div class="filter">
+                        <div class="filter-header">
+                            <label for="hue-rotate"><i class="fas fa-palette"></i> Hue Rotate</label>
+                            <span class="range-value" id="hue-rotate-value">0°</span>
+                        </div>
+                        <input type="range" min="0" max="360" value="0" id="hue-rotate" aria-label="Hue rotate control">
+                    </div> 
+
+                    <div class="filter">
+                        <div class="filter-header">
+                            <label for="sepia"><i class="fas fa-image"></i> Sepia</label>
+                            <span class="range-value" id="sepia-value">0%</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="0" id="sepia" aria-label="Sepia control">
+                    </div>
+
+                    <div class="filter">
+                        <div class="filter-header">
+                            <label for="brightness"><i class="fas fa-sun"></i> Brightness</label>
+                            <span class="range-value" id="brightness-value">100%</span>
+                        </div>
+                        <input type="range" min="0" max="200" value="100" id="brightness" aria-label="Brightness control">
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h2><i class="fas fa-flipboard"></i> Transform</h2>
+                    <div class="flip-buttons">
+                        <div class="flip-option">
+                            <input type="radio" name="flip" id="no-flip" checked aria-label="No flip">
+                            <label for="no-flip">
+                                <i class="fas fa-image"></i>
+                                <span>Original</span>
+                            </label>
+                        </div>
+
+                        <div class="flip-option">
+                            <input type="radio" name="flip" id="flip-x" aria-label="Flip horizontal">
+                            <label for="flip-x">
+                                <i class="fas fa-arrows-alt-h"></i>
+                                <span>Flip Horizontal</span>
+                            </label>
+                        </div>
+
+                        <div class="flip-option">
+                            <input type="radio" name="flip" id="flip-y" aria-label="Flip vertical">
+                            <label for="flip-y">
+                                <i class="fas fa-arrows-alt-v"></i>
+                                <span>Flip Vertical</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="rotation-control">
+                        <label for="rotation"><i class="fas fa-sync-alt"></i> Rotation</label>
+                        <div class="rotation-buttons">
+                            <button id="rotate-left" aria-label="Rotate left"><i class="fas fa-undo"></i></button>
+                            <input type="number" id="rotation" min="0" max="360" value="0" aria-label="Rotation degrees">
+                            <button id="rotate-right" aria-label="Rotate right"><i class="fas fa-redo"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-section actions">
+                    <button id="reset-button" class="action-btn">
+                        <i class="fas fa-undo"></i> Reset All
+                    </button>
+                    <button id="random-button" class="action-btn">
+                        <i class="fas fa-random"></i> Randomize
+                    </button>
+                </div>
+            </div>
+
+            <div class="result-panel">
+                <div class="image-container">
+                    <div class="placeholder" id="image-placeholder">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Upload an image to get started</p>
+                    </div>
+                    <img id="chosen-image" alt="Your edited image will appear here">
+                </div>
+
+                <div class="action-buttons">
+                    <div class="upload-btn-wrapper">
+                        <input type="file" id="upload-button" accept="image/*" aria-label="Upload image">
+                        <label for="upload-button" class="action-btn primary">
+                            <i class="fas fa-upload"></i> Choose Image
+                        </label>
+                    </div>
+                    <button id="download-button" class="action-btn secondary" disabled>
+                        <i class="fas fa-download"></i> Download Image
+                    </button>
+                </div>
+
+                <div class="presets">
+                    <h3>Quick Presets</h3>
+                    <div class="preset-grid">
+                        <button class="preset-btn" data-preset="vintage">
+                            <i class="fas fa-camera-retro"></i> Vintage
+                        </button>
+                        <button class="preset-btn" data-preset="blackwhite">
+                            <i class="fas fa-moon"></i> B&W
+                        </button>
+                        <button class="preset-btn" data-preset="warm">
+                            <i class="fas fa-sun"></i> Warm
+                        </button>
+                        <button class="preset-btn" data-preset="cool">
+                            <i class="fas fa-snowflake"></i> Cool
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="app-footer">
+            <p>PixelPerfect Image Editor &copy; 2023 | Made with <i class="fas fa-heart"></i></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Image Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        
+        <div class="editor">
+           <div class="filter">
+                <label for="blur">Blur</label>
+                <input type="range" min="0" max="5" value="0" step="0.1" id="blur">
+                <span class="range-value" id="blur-value">0%</span>
+           </div>  
+           
+           <div class="filter">
+                <label for="contrast">Contrast</label>
+                <input type="range" min="0" max="200" value="100"  id="contrast">
+                <span class="range-value" id="contrast-value">100%</span>
+           </div>   
+           
+           <div class="filter">
+                <label for="hue-rotate">Hue-Rotate</label>
+                <input type="range" min="0" max="360" value="0"  id="hue-rotate">
+                <span class="range-value" id="hue-rotate-value">0%</span>
+           </div> 
+
+           <div class="filter">
+                <label for="sepia">Sepia</label>
+                <input type="range" min="0" max="100" value="0"  id="sepia">
+                <span class="range-value" id="hue-rotate-value">0%</span>
+           </div> 
+           
+           <div class="flip-buttons">
+                <div class="flip-option">
+                    <input type="radio" name="flip" id="no-flip" checked>
+                    <label for="no-flip">No Flip</label>
+                </div>
+
+                <div class="flip-option">
+                    <input type="radio" name="flip" id="flip-x">
+                    <label for="flip-x">Flip Horizontal</label>
+                </div>
+
+                <div class="flip-option">
+                    <input type="radio" name="flip" id="flip-y">
+                    <label for="flip-y">Flip Vertical</label>
+                </div>
+           </div>
+        </div>
+
+        <div class="result">
+            <figure class="image-container">
+                <img id="chosen-image">
+            </figure>
+            <input type="file" id="upload-button" accept="Image/*">
+            <label for="upload-button">Choose an Image</label>
+            <button id="download-button">Download Image</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> -->
