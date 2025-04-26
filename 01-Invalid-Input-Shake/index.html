@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <form id="myForm">
+            <div class="form-header">
+                <h2>Welcome Back!</h2>
+                <p>Please enter your details</p>
+            </div>
+            
+            <div class="input-container">
+                <div id="errorMessage" class="error-message">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>Please enter a valid input</span>
+                </div>
+                <input
+                    type="text"
+                    id="inputField"
+                    placeholder="Enter your text here"
+                    required
+                >
+                <div class="input-icons">
+                    <i class="fas fa-check valid-icon"></i>
+                    <i class="fas fa-times invalid-icon"></i>
+                </div>
+            </div>
+            
+            <button type="submit" onclick="validateInput()">
+                <span class="btn-text">Submit</span>
+                <i class="fas fa-paper-plane"></i>
+            </button>
+            
+            <div class="form-footer">
+                <p>Need help? <a href="#">Contact support</a></p>
+            </div>
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
