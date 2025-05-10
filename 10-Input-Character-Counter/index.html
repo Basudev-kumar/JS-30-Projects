@@ -1,21 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Character Counter</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Image Slider</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Input Character Counter</h1>
-        <p>0</p>
-        <input type="text" placeholder="Enter the Words/Sentence here">
-        <div style="margin-top:2.5rem">Disclamier the count includes space and Special Character</div>
+  <div class="slider-container">
+    <div class="slider">
+      <img src="img1.jpg" class="slide active" alt="Image 1">
+      <img src="img2.jpg" class="slide" alt="Image 2">
+      <img src="img3.jpg" class="slide" alt="Image 3">
+      <img src="img4.jpg" class="slide" alt="Image 4">
+
+      <button id="prev" class="nav-btn">&#10094;</button>
+      <button id="next" class="nav-btn">&#10095;</button>
     </div>
+
+    <div class="dots">
+      <button onclick="dot(0)" class="dot active-dot"></button>
+      <button onclick="dot(1)" class="dot"></button>
+      <button onclick="dot(2)" class="dot"></button>
+      <button onclick="dot(3)" class="dot"></button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Image Slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide active">
+                <img src="./img1.jpg" alt="Nature Image 1">
+                <div class="slide-caption">
+                    <h3>Beautiful Nature</h3>
+                    <p>Explore the wonders of our natural world</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="./img2.jpg" alt="Nature Image 2">
+                <div class="slide-caption">
+                    <h3>Mountain Views</h3>
+                    <p>Discover breathtaking mountain landscapes</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="./img3.jpg" alt="Nature Image 3">
+                <div class="slide-caption">
+                    <h3>Ocean Wonders</h3>
+                    <p>The deep blue sea and its mysteries</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="./img4.jpg" alt="Nature Image 4">
+                <div class="slide-caption">
+                    <h3>Forest Adventures</h3>
+                    <p>Lush green forests waiting to be explored</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+            <button id="next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="indicators">
+            <button class="indicator active" aria-label="Go to slide 1"></button>
+            <button class="indicator" aria-label="Go to slide 2"></button>
+            <button class="indicator" aria-label="Go to slide 3"></button>
+            <button class="indicator" aria-label="Go to slide 4"></button>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
     
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="image-container">
+            <img src="img1.jpg" id="content1" class="active">
+            <img src="img2.jpg" id="content2" >
+            <img src="img3.jpg" id="content3" >
+            <img src="img4.jpg" id="content4" >
+        </div>
+
+        <div class="dot-container">
+            <button onclick="dot(1)"></button>
+            <button onclick="dot(2)"></button>
+            <button onclick="dot(3)"></button>
+            <button onclick="dot(4)"></button>
+        </div>
+
+        <button id="prev" onclick="prev()">&lt;</button>
+        <button id="next" onclick="next()">&gt;</button>
+    </div>
+
 
     <script src="script.js"></script>
 </body>
-</html>
+</html> -->
